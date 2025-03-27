@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <link href="./src/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script type="text/javascript">
+      {window.addEventListener('resize',() => {
+        // let width = document.clientWidth;
+        // w = width;
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        let width = (w/4>50) ? w/5*3 : (w-50)/4*3;
+        let height = h*2/3;
+        const getSvg = document.querySelector("svg");
+        getSvg.width = width;
+        getSvg.height = height;
+      })}
+    </script>
+  </body>
+</html>
+
+
